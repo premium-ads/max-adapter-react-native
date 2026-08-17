@@ -1,0 +1,47 @@
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  namespace 'net.premiumads.rnmaxadapter'
+  compileSdkVersion safeExtGet('compileSdkVersion', 34)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 24)
+    targetSdkVersion safeExtGet('targetSdkVersion', 34)
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = '17'
+  }
+}
+
+// Inject the PremiumAds Maven repository into every project in the build so
+// that the consuming app (and this library) can resolve the native AAR
+// without requiring manual Gradle edits by the RN developer.
+if (rootProject != project) {
+  rootProject.allprojects { p ->
+    p.repositories {
+      maven { url 'https://repo.premiumads.net/artifactory/mobile-ads-sdk/' }
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+  google()
+  maven { url 'https://repo.premiumads.net/artifactory/mobile-ads-sdk/' }
+}
+
+dependencies {
+  implementation 'com.facebook.react:react-android'
+  api 'net.premiumads.sdk:max-adapter:1.0.0'
+}

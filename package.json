@@ -1,0 +1,41 @@
+{
+  "name": "@premiumads/react-native-max-adapter",
+  "version": "1.0.0",
+  "description": "PremiumAds mediation adapter for AppLovin MAX (react-native-applovin-max).",
+  "main": "src/index.tsx",
+  "types": "src/index.tsx",
+  "files": [
+    "src",
+    "android/build.gradle",
+    "android/src",
+    "ios",
+    "PremiumAdsReactNativeMaxAdapter.podspec",
+    "react-native.config.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "react-native",
+    "applovin",
+    "max",
+    "premiumads",
+    "mediation",
+    "ads"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/premium-ads/max-adapter-react-native.git"
+  },
+  "author": "alexgmax <alex@premiumads.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/premium-ads/max-adapter-react-native/issues"
+  },
+  "homepage": "https://github.com/premium-ads/max-adapter-react-native#readme",
+  "peerDependencies": {
+    "react-native": ">=0.71.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
