@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'React-Core'
   s.dependency 'PremiumAdsMaxAdapter'
-  s.dependency 'AppLovinSDK'
+  s.dependency 'AppLovinSDK', '>= 13.0'
 end

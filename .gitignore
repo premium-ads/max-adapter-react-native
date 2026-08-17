@@ -1,10 +1,5 @@
-node_modules
-*.log
+build/
+.gradle/
+*.tgz
+node_modules/
 .DS_Store
-.vscode
-.idea
-android/build
-android/.gradle
-ios/build
-*.xcworkspace
-*.xcuserstate
