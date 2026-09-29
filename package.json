@@ -1,6 +1,6 @@
 {
   "name": "@premiumads/react-native-max-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PremiumAds mediation adapter for AppLovin MAX (react-native-applovin-max).",
   "main": "src/index.tsx",
   "types": "src/index.tsx",

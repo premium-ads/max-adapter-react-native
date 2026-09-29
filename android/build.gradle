@@ -43,5 +43,7 @@ repositories {
 
 dependencies {
   implementation 'com.facebook.react:react-android'
-  api 'net.premiumads.sdk:max-adapter:1.0.0'
+  api 'net.premiumads.sdk:max-adapter:1.0.1'
+  // Google Mobile Ads SDK: the adapter needs 23.0.0 or newer but does not bundle it; Gradle keeps a newer version declared by the app.
+  api 'com.google.android.gms:play-services-ads:23.0.0'
 }

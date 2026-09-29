@@ -80,7 +80,7 @@ Once initialized, use the standard `react-native-applovin-max` APIs (`AppLovinMA
 
 This JS package is versioned independently from the native adapters. It pins:
 
-- Android: `net.premiumads.sdk:max-adapter:1.0.0`
+- Android: `net.premiumads.sdk:max-adapter:1.0.1` and `com.google.android.gms:play-services-ads:23.0.0` (minimum; a newer version in your app is kept)
 - iOS: `PremiumAdsMaxAdapter` (via CocoaPods trunk)
 
 ## Support
